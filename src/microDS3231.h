@@ -46,7 +46,8 @@ struct DateTime {
 
 class MicroDS3231 {
 public:
-    MicroDS3231(uint8_t addr = 0x68);               // конструктор. Можно передать адрес    
+    MicroDS3231(uint8_t addr = 0x68);               // конструктор. Можно передать адрес  
+    MicroDS3231(int sda, int scl);               // конструктор. Можно передать пины i2c
 	bool begin();								    // инициализация, вернет true, если RTC найден
     void setTime(const __FlashStringHelper* stamp);	// установка времени == времени компиляции
     void setTime(DateTime time);	                // установить из структуры DateTime

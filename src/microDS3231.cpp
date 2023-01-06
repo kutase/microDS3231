@@ -21,6 +21,10 @@ MicroDS3231::MicroDS3231(uint8_t addr) : _addr(addr) {
     Wire.begin();
 }
 
+MicroDS3231::MicroDS3231(int sda, int scl) {
+    Wire.setPins(sda, scl);
+}
+
 bool MicroDS3231::begin(void){
     Wire.begin();                       // Инит шины
     Wire.beginTransmission(_addr);      // Зовем DS3231 по адресу
