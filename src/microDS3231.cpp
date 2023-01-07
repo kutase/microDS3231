@@ -22,7 +22,6 @@ MicroDS3231::MicroDS3231(uint8_t addr) : _addr(addr) {
 }
 
 MicroDS3231::MicroDS3231(int sda, int scl) {
-    _addr = 0x68;
     Wire.setPins(sda, scl);
 }
 

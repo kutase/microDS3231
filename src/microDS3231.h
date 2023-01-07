@@ -80,7 +80,7 @@ private:
     uint8_t readRegister(uint8_t addr);
     uint8_t unpackRegister(uint8_t data);
     uint8_t unpackHours(uint8_t data);
-    const uint8_t _addr;
+    const uint8_t _addr = 0x68;
 };
 
 #endif
